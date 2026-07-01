@@ -1,0 +1,17 @@
+   # Python
+   __pycache__/
+   *.pyc
+   .env
+   
+   # Virtual environments
+   .iyzimit/
+   venv/
+   env/
+   
+   # Jupyter
+   .ipynb_checkpoints/
+   
+   # Data files you don't want on GitHub
+   *.csv
+   *.xlsx
+   data/
