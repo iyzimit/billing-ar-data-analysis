@@ -16,3 +16,6 @@
    *.csv
    *.xlsx
    data/
+   
+   billing-ar-data-analysis/
+   notebooks copy/
