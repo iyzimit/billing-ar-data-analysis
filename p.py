@@ -4,22 +4,21 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Load your cleaned billing data
-df = pd.read_excel(r"C:\Users\ibrahim.zimit\Desktop\billing-ar-analysis\final.xlsx")  # use your cleaned file
+df = pd.read_excel(r"C:\Users\ibrahim.zimit\Desktop\billing-ar-analysis\data\final.xlsx")  # use your cleaned file
 
 st.title("Billing Dashboard 💻") 
 
-st.title("💻 Day 5 Billing Intelligence Dashboard")
+st.title("💻 Billing Intelligence Dashboard")
 
 # -------------------------------
 # KPI Metrics
 # -------------------------------
-total_customers = df['customer'].nunique()
+ 
 total_billed = df['bill_amount'].sum()
 total_payments = df['previous_payments'].sum()
 total_debt = df['closing_balance'].sum()
 
 st.subheader("📊 Key Metrics")
-st.metric("Total Customers", total_customers)
 st.metric("Total Billed ", total_billed)
 st.metric("Total Payments", total_payments)
 st.metric("Total Outstanding Balance", total_debt)
@@ -66,14 +65,14 @@ else:
     filtered = df.copy()
 
 st.subheader(f"📋 Customer List: {status_option}")
-st.dataframe(filtered[['customer','bill_amount','previous_payments','payment_percent','closing_balance','risk']])
+st.dataframe(filtered[['account_number','bill_amount','previous_payments','payment_percent','closing_balance','risk']])
 
 # -------------------------------
 # Bar Chart: Payment Percent
 # -------------------------------
 st.subheader("📊 Payment Percentage by Customer")
 fig, ax = plt.subplots(figsize=(10,5))
-bars = ax.bar(filtered['customer'], filtered['payment_percent'], color='orange')
+bars = ax.bar(filtered['account_number'], filtered['payment_percent'], color='orange')
 
 # Highlight zero payers in red
 for bar, percent in zip(bars, filtered['payment_percent']):
@@ -89,13 +88,13 @@ st.pyplot(fig)
 # -------------------------------
 st.subheader("⚠️ High-Risk Customers")
 high_risk = df[df['risk'] == 'High Risk']
-st.dataframe(high_risk[['customer','bill_amount','previous_payments','closing_balance','payment_percent']])
+st.dataframe(high_risk[['account_number','bill_amount','previous_payments','closing_balance','payment_percent']])
 
 # -------------------------------
 # Outlier Bills
 # -------------------------------
 st.subheader("💡 Outlier Bills (Z-Score > 2)")
-st.dataframe(outliers[['customer','bill_amount','z_score']])
+st.dataframe(outliers[['account_number','bill_amount','z_score']])
 
 # -------------------------------
 # Payment Heatmap
