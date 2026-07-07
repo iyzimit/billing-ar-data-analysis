@@ -2,6 +2,15 @@
 # Kano Electricity Distribution Company
 
 # -------------------------------
+# File Paths
+# -------------------------------
+import os
+from turtle import pd
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+EXCEL_PATH = os.path.join(BASE_DIR, "data", "final.xlsx")
+DATA_PATH = os.path.join(BASE_DIR, "data", "final.parquet")
+ 
+# -------------------------------
 # Branding
 # -------------------------------
 COMPANY_NAME = "KEDCO Data Systems"
@@ -9,7 +18,7 @@ COMPANY_SHORT = "KEDCO"
 PAGE_TITLE = "Billing Intelligence Dashboard"
 PAGE_ICON = "💻"
 AUTHOR = "Ibrahim Zimit"
-LOGO_PATH = "C:\\Users\\ibrahim.zimit\\Desktop\\billing-ar-analysis\\assets\\KEDCO_logo.png" 
+LOGO_PATH = os.path.join(BASE_DIR, "assets", "KEDCO_logo.png")
 
 # -------------------------------
 # KEDCO Brand Colors - from official style guide
@@ -29,17 +38,6 @@ RISK_COLORS = {
     'Low Risk': COLORS['success'],
 }
 
-# -------------------------------
-# File Paths
-# -------------------------------
-import os
-from turtle import pd
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-EXCEL_PATH = os.path.join(BASE_DIR, "data", "final.xlsx")
-DATA_PATH = os.path.join(BASE_DIR, "data", "final.parquet")
- 
-#DATA_PATH = "C:\\Users\\ibrahim.zimit\\Desktop\\billing-ar-analysis\\data\\final.parquet"
-#EXCEL_PATH = "C:\\Users\\ibrahim.zimit\\Desktop\\billing-ar-analysis\\data\\final.xlsx"
 
 # -------------------------------
 # KEDCO Business Rules - NERC Approved
