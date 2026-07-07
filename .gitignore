@@ -1,21 +1,25 @@
-   # Python
-   __pycache__/
-   *.pyc
-   .env
-   
-   # Virtual environments
-   .iyzimit/
-   venv/
-   env/
-   .venv/
-   
-   # Jupyter
-   .ipynb_checkpoints/
-   
-   # Data files you don't want on GitHub
-   *.csv
-   *.xlsx
-   data/
-   
-   billing-ar-data-analysis/
-   notebooks copy/
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+.iyzimit/
+venv/
+env/
+
+# Data files - don't push sensitive KEDCO data
+*.parquet
+*.csv
+*.xlsx
+data/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
