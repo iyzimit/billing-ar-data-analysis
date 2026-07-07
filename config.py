@@ -32,8 +32,14 @@ RISK_COLORS = {
 # -------------------------------
 # File Paths
 # -------------------------------
-DATA_PATH = "C:\\Users\\ibrahim.zimit\\Desktop\\billing-ar-analysis\\data\\final.parquet"
-EXCEL_PATH = "C:\\Users\\ibrahim.zimit\\Desktop\\billing-ar-analysis\\data\\final.xlsx"
+import os
+from turtle import pd
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+EXCEL_PATH = os.path.join(BASE_DIR, "data", "final.xlsx")
+DATA_PATH = os.path.join(BASE_DIR, "data", "final.parquet")
+ 
+#DATA_PATH = "C:\\Users\\ibrahim.zimit\\Desktop\\billing-ar-analysis\\data\\final.parquet"
+#EXCEL_PATH = "C:\\Users\\ibrahim.zimit\\Desktop\\billing-ar-analysis\\data\\final.xlsx"
 
 # -------------------------------
 # KEDCO Business Rules - NERC Approved
