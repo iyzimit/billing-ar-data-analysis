@@ -75,7 +75,7 @@ col4.metric("Outstanding Balance", NAIRA_FORMAT.format(total_debt),
 outliers = df[np.abs(df['z_score']) > OUTLIER_Z_THRESHOLD]
 
 # -------------------------------
-# KEDCO Band Performance
+# ZIMICO Band Performance
 # -------------------------------
 st.subheader("⚡ TARIFF, FEEDER, CUSTOMER TYPE AND BILLING STYLE PERFORMANCE" , text_alignment="center")
 band_col1, band_col2, band_col3 = st.columns([2,2,2])
@@ -306,7 +306,7 @@ with agg_tab9:
             st.download_button(
                 "📥 Download Alert Report",
                 email_text,
-                f"KEDCO_Revenue_Alerts_{datetime.now().strftime('%Y%m%d')}.txt",
+                f"ZIMICO_Revenue_Alerts_{datetime.now().strftime('%Y%m%d')}.txt",
                 "text/plain",
                 use_container_width=True
             )
@@ -464,7 +464,7 @@ with agg_tab6:
         st.download_button(
             "📥 Export MoM Comparison",
             comp_df.to_csv(index=False).encode('utf-8'),
-            f"KEDCO_NERC_MoM_{month1}_vs_{month2}.csv",
+            f"ZIMICO_NERC_MoM_{month1}_vs_{month2}.csv",
             "text/csv",
             use_container_width=True
         )
@@ -474,9 +474,9 @@ with agg_tab6:
         if st.button("📄 Generate PDF Report", key="nerc_pdf_btn", use_container_width=True, type="primary"):
             pdf_buffer = generate_nerc_pdf_report(df_m1, nerc_m1, month1, LOGO_PATH)
             st.download_button(
-                "⬇️ Download KEDCO NERC Report",
+                "⬇️ Download ZIMICO NERC Report",
                 pdf_buffer,
-                f"KEDCO_NERC_Report_{month1}.pdf",
+                f"ZIMICO_NERC_Report_{month1}.pdf",
                 "application/pdf",
                 use_container_width=True
             )
@@ -561,7 +561,7 @@ with agg_tab7:
     st.download_button(
         "📥 Export Feeder Scorecard",
         feeder_nerc.to_csv(index=False).encode('utf-8'),
-        f"KEDCO_Feeder_Scorecard_{datetime.now().strftime('%Y%m%d')}.csv",
+        f"ZIMICO_Feeder_Scorecard_{datetime.now().strftime('%Y%m%d')}.csv",
         "text/csv"
     )
 
@@ -702,9 +702,9 @@ In accordance with NERC regulations, you are hereby given 14 days from the date 
 
 Failure to pay the full amount by {disconnection_date.strftime('%d-%m-%Y')} will result in disconnection of electricity supply to your premises without further notice.
 
-Payment can be made at any KEDCO office, authorized payment centers, or via online platforms.
+Payment can be made at any ZIMICO office, authorized payment centers, or via online platforms.
 
-For enquiries, contact: KEDCO Customer Care
+For enquiries, contact: ZIMICO Customer Care
 
 Yours faithfully,
 Revenue Protection Department
@@ -716,7 +716,7 @@ Generated: {datetime.now().strftime('%d-%m-%Y %H:%M')}
                         st.download_button(
                             "⬇️ Download Demand Letter",
                             demand_letter,
-                            f"KEDCO_Demand_Notice_{cust['account_number']}_{datetime.now().strftime('%Y%m%d')}.txt",
+                            f"ZIMICO_Demand_Notice_{cust['account_number']}_{datetime.now().strftime('%Y%m%d')}.txt",
                             "text/plain",
                             use_container_width=True,
                             key="demand_letter_download"
@@ -776,6 +776,6 @@ st.sidebar.divider()
 st.sidebar.download_button(
     "📥 Export Filtered Data",
     filtered.to_csv(index=False).encode('utf-8'),
-    f"KEDCO_AR_{start_date}_{end_date}_{datetime.now().strftime('%Y%m%d')}.csv",
+    f"ZIMICO_AR_{start_date}_{end_date}_{datetime.now().strftime('%Y%m%d')}.csv",
     "text/csv"
 )

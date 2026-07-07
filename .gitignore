@@ -7,7 +7,7 @@ __pycache__/
 venv/
 env/
 
-# Data files - don't push sensitive KEDCO data
+# Data files - don't push sensitive ZIMICO data
 *.parquet
 *.csv
 *.xlsx

@@ -139,7 +139,7 @@ def calculate_nerc_metrics(_df):
 
  
 def generate_nerc_pdf_report(df, nerc_metrics, period_str, logo_path=None):
-    """Generate KEDCO NERC compliance PDF report"""
+    """Generate ZIMICO NERC compliance PDF report"""
     buffer = io.BytesIO()
     doc = SimpleDocTemplate(buffer, pagesize=A4, topMargin=0.5*inch)
     styles = getSampleStyleSheet()
@@ -216,7 +216,7 @@ def generate_nerc_pdf_report(df, nerc_metrics, period_str, logo_path=None):
 
 
 def generate_revenue_alerts(df, config):
-    """Generate revenue protection alerts for KEDCO"""
+    """Generate revenue protection alerts for ZIMICO"""
     alerts = []
     
     # Alert 1: Zero payments + high consumption
@@ -331,7 +331,7 @@ TOTAL REVENUE AT RISK: ₦{total_at_risk:,.0f}
 
 
 def generate_revenue_alerts(df, config):
-    """Generate revenue protection alerts for KEDCO"""
+    """Generate revenue protection alerts for ZIMICO"""
     alerts = []
     
     # Alert 1: Zero payments + high consumption

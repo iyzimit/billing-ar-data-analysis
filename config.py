@@ -1,5 +1,4 @@
-# config.py - KEDCO Production Config
-# Kano Electricity Distribution Company
+# config.py  
 
 # -------------------------------
 # File Paths
@@ -13,19 +12,19 @@ DATA_PATH = os.path.join(BASE_DIR, "data", "final.parquet")
 # -------------------------------
 # Branding
 # -------------------------------
-COMPANY_NAME = "KEDCO Data Systems"
-COMPANY_SHORT = "KEDCO"
+COMPANY_NAME = "ZIMICO Data Systems"
+COMPANY_SHORT = "ZIMICO"
 PAGE_TITLE = "Billing Intelligence Dashboard"
 PAGE_ICON = "💻"
 AUTHOR = "Ibrahim Zimit"
-LOGO_PATH = os.path.join(BASE_DIR, "assets", "KEDCO_logo.png")
+LOGO_PATH = os.path.join(BASE_DIR, "assets", "ZIMICO_logo.png")
 
 # -------------------------------
-# KEDCO Brand Colors - from official style guide
+# ZIMICO Brand Colors - from official style guide
 # -------------------------------
 COLORS = {
-    'primary': '#003366',      # KEDCO Navy Blue
-    'secondary': '#00509E',    # KEDCO Light Blue
+    'primary': '#003366',      # ZIMICO Navy Blue
+    'secondary': '#00509E',    # ZIMICO Light Blue
     'danger': '#C41E3A',       # Red - zero payments
     'warning': '#FF8C00',      # Orange - low payments  
     'success': '#228B22',      # Green - good collection
@@ -40,7 +39,7 @@ RISK_COLORS = {
 
 
 # -------------------------------
-# KEDCO Business Rules - NERC Approved
+# ZIMICO Business Rules - NERC Approved
 # -------------------------------
 RISK_THRESHOLDS = {
     'high_risk_payment_pct': 20,      # < 20% paid = high risk
@@ -53,7 +52,7 @@ OUTLIER_Z_THRESHOLD = 2               # z-score > 2 = outlier bill
 COLLECTION_TARGET = 85                # NERC target collection %
 
 # -------------------------------
-# KEDCO NERC Tariff Bands 2024
+# ZIMICO NERC Tariff Bands 2024
 # -------------------------------
 TARIFF_BANDS = {
     'A': {'name': 'Band A', 'min_hours': 20, 'desc': '20+ hours/day'},
@@ -63,10 +62,10 @@ TARIFF_BANDS = {
     'E': {'name': 'Band E', 'min_hours': 4, 'desc': '4-8 hours/day'},
 }
 
-# KEDCO Customer Types
+# ZIMICO Customer Types
 CUSTOMER_TYPES = ['Residential', 'Commercial', 'Industrial', 'Special', 'Street Lighting']
 
-# KEDCO Feeders - add your major ones
+# ZIMICO Feeders - add your major ones
 MAJOR_FEEDERS = [
     'Kumbotso 33KV', 'Dan Agundi 33KV', 'Zaria Road 11KV', 
     'Sabon Gari 11KV', 'Nassarawa 33KV', 'Dakata 11KV'
@@ -103,10 +102,10 @@ NERC_TARGETS = {
 }
 
 # -------------------------------
-# KEDCO Operational Data - update monthly
+# ZIMICO Operational Data - update monthly
 # -------------------------------
 OPERATIONAL_DATA = {
     'energy_received_kwh': 125000000,  # Update: Total energy from TCN monthly
     'reporting_month': 'June 2026',    # Update monthly
-    'total_customers': 850000,         # KEDCO customer base
+    'total_customers': 850000,         # ZIMICO customer base
 }
