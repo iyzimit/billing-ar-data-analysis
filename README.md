@@ -1,6 +1,6 @@
-# KEDCO Billing AR Analysis Dashboard
+# Billing AR Analysis Dashboard
 
-NERC-compliant revenue analysis and customer risk monitoring for Kano Electricity Distribution Company.
+NERC-compliant revenue analysis and customer risk monitoring for Electricity Distribution Company.
 
 ## Features
 - Month-on-Month NERC Compliance tracking
